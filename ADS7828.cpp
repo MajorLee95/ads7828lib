@@ -6,10 +6,15 @@ ADS7828::ADS7828(){
     _addr = ADS7828_DEFAULT_AD;
 }
 
+ADS7828::ADS7828( uint8_t addr ){
+    _addr = addr;
+}
+
+
 bool ADS7828::begin(){
     _i2cBus = &Wire;
     _i2cBus->begin();
-    
+    //no controle register to check and return a false value
     return true;
 }
 
