@@ -15,9 +15,13 @@
 @file ADS7828.h
 @brief include all other include needed
 */
-
 #include <ADS7828.h>
 
+/**
+\var adc
+\brief an instance of the class under test
+Default address is 0x48
+*/
 ADS7828 adc;
 
 void setup(){
