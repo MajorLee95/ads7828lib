@@ -1,4 +1,6 @@
-
+/**
+@file ADS7828.h
+*/
 
 
 #ifndef ADS7828_H

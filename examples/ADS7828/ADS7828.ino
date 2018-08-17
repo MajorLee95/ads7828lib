@@ -8,6 +8,7 @@
  *  @version   if needed git controlled version
  *  @date      08/2018
  *  @copyright GNU Public License.
+ 
  <https://github.com/MajorLee95/ads7828lib>
 */
 
