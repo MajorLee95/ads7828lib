@@ -13,7 +13,7 @@ ADS7828::ADS7828( uint8_t addr ){
 
 bool ADS7828::begin(){
     _i2cBus = &Wire;
-    _i2cBus->begin();
+    _i2cBus->begin(D2, D1);
     //no controle register to check and return a false value
     return true;
 }
@@ -41,8 +41,11 @@ uint16_t ADS7828::read16(){
 
     _i2cBus->beginTransmission((uint8_t)_addr);
     _i2cBus->endTransmission();
+    delay(1);
     _i2cBus->requestFrom((uint8_t)_addr, (byte)2);
-    value = (_i2cBus->read() << 8) | _i2cBus->read();
+    if (_i2cBus->available()==2)
+        value = (_i2cBus->read() << 8) | _i2cBus->read();
+    else value = 0;
 
     return value;
 }

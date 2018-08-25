@@ -29,10 +29,14 @@ void setup(){
     adc.begin();
     Serial.begin(115200);
     Serial.println("ADS7828 ADC lib Test...");
+    Serial.println( CMD_CH0SEL_SD | POWERDOWN_ALLON, HEX);
 }
 
 void loop(){
-    adc.writeCmd8( CMD_CH0SEL_SD | POWERDOWN );
+    
+    adc.writeCmd8( CMD_CH0SEL_SD | POWERDOWN_ALLON  );
+    delay(5);
     int value = adc.read16();
-    Serial.println( "CH0 val = " + value);
+    Serial.println( "CH0 val = " + (String)value);
+    delay(500);
 }
