@@ -3,6 +3,8 @@ VoLAB_ADS7828
 
 ADS7828 I2C 12bits 8 channel ADC
 Work in progess @ 17/08/2018
+@26/08/2018 : not fully tested but it seams to work
+Chan0 single ended
 
 <!-- START COMPATIBILITY TABLE -->
 

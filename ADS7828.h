@@ -37,6 +37,7 @@
 #define POWERDOWN_ALLON 3<<2
 
 
+
 class ADS7828{
     public:
         ADS7828();

@@ -10,6 +10,10 @@ ADS7828::ADS7828( uint8_t addr ){
     _addr = addr;
 }
 
+/**
+@fn bool ADS7828::begin()
+@brief D1(GPIO5): SCK et D2 (GPIO4): SDA
+*/
 
 bool ADS7828::begin(){
     _i2cBus = &Wire;
